@@ -1,0 +1,26 @@
+[server]
+enableStaticServing = true
+
+[[theme.fontFaces]]
+family = "WeatherBilingual"
+url = "app/static/fonts/Comfortaa-Regular.ttf"
+style = "normal"
+weight = 400
+unicodeRange = "U+0000-024F"
+
+[[theme.fontFaces]]
+family = "WeatherBilingual"
+url = "app/static/fonts/VIP-RAWY-REGULAR.ttf"
+style = "normal"
+weight = 400
+unicodeRange = "U+0600-06FF, U+0750-077F, U+0870-089F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF"
+
+[theme]
+base = "dark"
+primaryColor = "#14B8A6"
+backgroundColor = "#0B1220"
+secondaryBackgroundColor = "#7a8cb1"
+textColor = "#E5E7EB"
+font = "WeatherBilingual"
+headingFont = "WeatherBilingual"
+borderColor = "#1F2937"
