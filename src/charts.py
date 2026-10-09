@@ -508,3 +508,4 @@ def create_monthly_precipitation_chart(
     )
 
     return figure
+
