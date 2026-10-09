@@ -5,15 +5,22 @@ import plotly.graph_objects as go
 from datetime import datetime, date
 import requests
 
-# Page configuration
+APP_NAME = "Morocco Weather History"
+APP_VERSION = "1.0.0"
+APP_RELEASE_DATE = "2026-10-09"
+
 st.set_page_config(
-    page_title="Morocco Weather History (1940-2026)",
+    page_title=f"{APP_NAME} | v{APP_VERSION}",
     page_icon="🇲🇦",
     layout="wide"
 )
 
+
 # Morocco regions with coordinates
 MOROCCO_REGIONS = {
+    "Azghar**": (33.6181, -4.7290),
+    "Mtarnagha**": (33.7222, -4.3914),
+    "Sefrou": (33.8283, -4.8283),
     "Casablanca": (33.5731, -7.5898),
     "Rabat": (34.0209, -6.8416),
     "Marrakech": (31.6295, -7.9811),
@@ -161,7 +168,10 @@ def create_precipitation_chart(df, region):
     return fig
 
 # Main app
-st.title("🇲🇦 Morocco Weather History (1940-2026)")
+st.title(f"🇲🇦 {APP_NAME}")
+st.caption(
+    f"Version {APP_VERSION} • Released {APP_RELEASE_DATE}"
+)
 st.markdown("""
 Historical weather data from **ERA5 reanalysis** - gap-free hourly data from 1940 to present.
 Data source: Open-Meteo Historical Weather API (free, no API key required)
