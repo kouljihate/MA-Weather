@@ -1,0 +1,135 @@
+/* =========================================
+   Morocco Weather History — bilingual styles
+   Arabic: VIP-RAWY-REGULAR
+   English: Comfortaa
+   ========================================= */
+
+@font-face {
+    font-family: "WeatherBilingual";
+    src: url("../fonts/Comfortaa-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-024F;
+}
+
+@font-face {
+    font-family: "WeatherBilingual";
+    src: url("../fonts/VIP-RAWY-REGULAR.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    unicode-range:
+        U+0600-06FF,
+        U+0750-077F,
+        U+0870-089F,
+        U+08A0-08FF,
+        U+FB50-FDFF,
+        U+FE70-FEFF;
+}
+
+/* Apply the bilingual font globally */
+[data-testid="stAppViewContainer"],
+[data-testid="stSidebar"],
+[data-testid="stMarkdownContainer"],
+[data-testid="stWidgetLabel"],
+[data-testid="stMetric"],
+[data-baseweb="select"],
+[role="listbox"],
+[role="option"],
+button,
+input,
+textarea {
+    font-family: "WeatherBilingual", Comfortaa, sans-serif !important;
+}
+
+[data-testid="stMarkdownContainer"] p,
+[data-testid="stMarkdownContainer"] h1,
+[data-testid="stMarkdownContainer"] h2,
+[data-testid="stMarkdownContainer"] h3,
+[data-testid="stMarkdownContainer"] h4,
+[data-testid="stWidgetLabel"] p,
+button p,
+[data-testid="stMetricLabel"] p,
+[data-testid="stMetricValue"] {
+   font-family: "WeatherBilingual", Comfortaa, sans-serif !important;
+}
+
+/* Arabic appears above English in headings */
+.bilingual-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    line-height: 1.5;
+}
+
+.bilingual-heading-1 {
+    font-size: 2.1rem;
+    font-weight: 700;
+}
+
+.bilingual-heading-2 {
+    font-size: 1.55rem;
+    font-weight: 650;
+}
+
+.bilingual-heading-3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.bilingual-arabic {
+    direction: rtl;
+    unicode-bidi: isolate;
+    text-align: center;
+}
+
+.bilingual-english {
+    direction: ltr;
+    opacity: 0.85;
+    font-size: 0.72em;
+    text-align: center;
+}
+
+.version {
+    font-size: 0.75rem;
+    opacity: 0.6;
+    text-align: center;
+}
+
+/* Sidebar styling */
+[data-testid="stSidebar"] {
+    background-color: #6a7e93;
+}
+
+[data-testid="stSidebar"] [data-testid="stWidgetLabel"] p {
+    font-weight: 600;
+}
+
+/* [data-testid="stSidebar"] {
+    background-color: var(--app-surface);
+    border-right: 1px solid var(--app-border);
+} */
+
+/* Buttons */
+[data-testid="stBaseButton-primary"] {
+    background-color: #0f766e;
+    border-color: #0f766e;
+}
+
+[data-testid="stBaseButton-primary"]:hover {
+    background-color: #115e59;
+    border-color: #115e59;
+}
+
+/* Metric cards */
+[data-testid="stMetric"] {
+    background-color: #695050;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 0.75rem;
+}
+
+[data-testid="stMetricValue"] {
+    font-weight: 700;
+}
